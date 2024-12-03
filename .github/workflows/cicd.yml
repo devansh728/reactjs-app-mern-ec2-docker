@@ -17,6 +17,7 @@ jobs:
         run: docker build -t accvpn304/react-js-app --build-arg REACT_APP_NODE_ENV='production' --build-arg REACT_APP_SERVER_BASE_URL='${{ secrets.REACT_APP_SERVER_BASE_URL }}'  .
       - name: Publish Image to docker hub
         run: docker push accvpn304/react-js-app:latest 
+        # hello
  
   deploy:
     needs: build
