@@ -3,7 +3,7 @@ name: Deploy Node Application
 on: 
   push:
     branches:
-      - mern-ec2-docker
+      - main
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
     runs-on: self-hosted 
     steps:
       - name: Pull image from docker hub
-        run: docker pull iaccvpn304/react-js-app:latest 
+        run: docker pull accvpn304/react-js-app:latest 
       - name: Delete old container
         run: docker rm -f reactjs-app-container
       - name: Run Docker Container
